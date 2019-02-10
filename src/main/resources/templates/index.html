@@ -3,7 +3,6 @@
 <head>
 <title>Courses</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
- <link rel="stylesheet" type="text/css" href="css/styles.css"> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
@@ -11,41 +10,24 @@
 
 	<div>
 		
-            <h1>Data by passing rest response</h1>
+            <h1>view courses</h1>
             
 		    	<div class="outerdiv">		
        			 <table class="tabledata">
-       			 	<thead>
-       			 		<tr>
-       			 			<th></th>
-		                	<th class="headthclass">ID</th>
-		                	<th class="headthclass">Start</th>
-		                	<th class="headthclass">End</th>
-		                	<th class="headthclass">qualification</th>
-		            	</tr>
-       			 	</thead>
+       			 	
        			 	<tbody>
-                        <th:block th:each="course : ${coursedata.courses}">
+                       
 		            	<tr class="coursedata bgclass">
-		            		<td class="anchortd"><a class="anchortag" id="${course.id}" href="#">+</a></td>
-		                	<td th:text="${course.id}"/>
-		                	<td th:text="${course.start}"/>
-		                	<td th:text="${course.end}"/>
-                            <td th:text="${course.qualification}"/>
+		            		<td class="anchortd"><a class="anchortag" href="javaparse">Data fetched by consuming rest service in spring controller</a></td>
                         </tr>
 
-                        <tr class="studentdata">
-                            <td/>
-					        <td>Student ID</td>
-					        <td>Name</td>
-					    </tr>
-					    <tr class="studentdata bgclass" th:each="student : ${course.students}">
-                            <td/>
-					        <td th:text="${student.id}"/>
-					        <td th:text="${student.name}"/>
-					    </tr>
+                        <tr class="coursedata bgclass">
+		                	<td class="anchortd"><a class="anchortag" href="jqajax">Data fetched by making ajax call in jquery</a></td>
+                        </tr>
+
+                        
 		                	
-		            	</th:block>
+		            	
 		            </tbody>
                 </table>
                 
@@ -54,7 +36,7 @@
 	</div>
 	
 	
-	<script src="js/scripts.js"></script>
+	
 	
 	
 	

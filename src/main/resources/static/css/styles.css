@@ -1,0 +1,30 @@
+a {
+    text-decoration: none;
+}
+
+
+tr {    
+    background:skyblueblue;
+ }
+
+
+ .outerdiv {
+  /*background-color: lightgrey;
+   border: 25px solid green;
+   margin: 25px;*/
+  width: 600px;
+  padding: 50px;
+}
+
+
+.headthclass {
+
+    padding-left: 50px;
+    padding-right: 50px;
+    border-bottom: 2px solid #ccc; 
+
+}
+
+.bgclass{
+    background-color: skyblue;
+}

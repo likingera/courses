@@ -2,16 +2,7 @@ a {
     text-decoration: none;
 }
 
-
-/*tr {    
-    background:skyblueblue;
- }*/
-
-
  .outerdiv {
-  /*background-color: lightgrey;
-   border: 25px solid green;
-   margin: 25px;*/
   width: 600px;
   padding: 50px;
 }
@@ -27,4 +18,8 @@ a {
 
 .bgclass{
     background-color: skyblue;
+}
+
+.stubgclass{
+    background-color: lightgreen;
 }

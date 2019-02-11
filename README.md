@@ -6,7 +6,7 @@ Course information application
 ## TechnologyUsed
 
 1. jdk1.8
-2. Spring framework
+2. Spring Boot
 3. Maven
 
 

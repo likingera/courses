@@ -2,6 +2,11 @@ package com.courses.model;
 
 import java.util.List;
 
+/**
+ * @author Likin Gera
+ *
+ */
+
 public class Course {
 	
 	private String id;
@@ -38,6 +43,11 @@ public class Course {
 	}
 	public void setStudents(List<Student> students) {
 		this.students = students;
+	}
+	@Override
+	public String toString() {
+		return "Course [id=" + id + ", start=" + start + ", end=" + end + ", qualification=" + qualification
+				+ ", students=" + students + "]";
 	}
 	
 

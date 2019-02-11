@@ -2,10 +2,13 @@ package com.courses.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
+
+/**
+ * @author Likin Gera
+ *
+ */
 @SpringBootApplication
-//@ComponentScan({ "com.courses.*"})
 public class CourseRun {
 
 	

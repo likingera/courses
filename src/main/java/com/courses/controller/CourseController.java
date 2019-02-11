@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
-import java.nio.charset.Charset;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -17,19 +16,18 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.client.RestTemplate;
 //import org.springframework.web.servlet.mvc.method.annotation.AbstractJsonpResponseBodyAdvice;
 
 import com.courses.model.Courses;
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import com.google.gson.stream.JsonReader;
 
+
+/**
+ * @author Likin Gera
+ *
+ */
 
 @Controller
 public class CourseController {
@@ -55,20 +53,19 @@ public class CourseController {
 //	    public JsonpAdvice() {
 //	    	
 //	    	super("callback");
-//	    	//String[] callback=  new String{"courses"};
+//	    	
 //	        
 //	    }
 //	}
 	
-	@CrossOrigin(origins = "http://localhost:8080")
+	
 	@GetMapping("/javaparse")
 	public String getCourses(Model model) {
 		
-		LOG.info("url is "+courseUrl);
+		LOG.info("javaparse called ");
 		Courses courses = readJsonObjectFromUrl();
-		Courses coursesrest = restTemplate.getForObject(courseUrl, Courses.class);
-		LOG.info("size is "+coursesrest.getCourses().size());
-		LOG.info("size is "+courses.getCourses().size());
+		//Courses coursesrest = restTemplate.getForObject(courseUrl, Courses.class);
+		//LOG.info("size is "+coursesrest.getCourses().size());
 		model.addAttribute("coursedata", courses);
 		return "javaparse.html";
 	}
@@ -89,14 +86,16 @@ public class CourseController {
 	
 	
 	
-	public Courses readJsonObjectFromUrl()  {
+	/**
+	 * This method reads the data from the url and convert jsonp into POJO 
+	 * @return Courses java Object
+	 */
+	private Courses readJsonObjectFromUrl()  {
 		try {
 			URL url = new URL(courseUrl);
 		    URLConnection request = url.openConnection();
 		    request.connect();
 
-		    
-		   
 		    InputStreamReader is = new InputStreamReader((InputStream) request.getContent());
 		    String badJson = new BufferedReader(is).lines().collect(Collectors.joining("\n"));
 		    LOG.error(badJson);

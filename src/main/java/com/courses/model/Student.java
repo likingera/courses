@@ -1,5 +1,10 @@
 package com.courses.model;
 
+
+/**
+ * @author Likin Gera
+ *
+ */
 public class Student {
 	
 	private String id;
@@ -15,6 +20,10 @@ public class Student {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + "]";
 	}
 
 }

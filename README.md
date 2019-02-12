@@ -19,7 +19,7 @@ Course information application
 ## Running the application
 
 1. The application uses springboot and uses embeded tomcat container.
-2. Run the main method present under the class com.courses.controller.CourseController.java
+2. Run the main method present under the class com.courses.controller.CourseRun.java
 3. open browser and hit the url http://localhost:8080/course/
 4. There are two implementations of the page
    `Data fetched by consuming rest service in spring controller`
